@@ -1,0 +1,84 @@
+@import "../../../styles.sass"
+
+.sidenav 
+    position: fixed
+    z-index: 1
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 0.75rem
+    width: 4rem
+    height: 100vh
+    padding: 0.75rem 0
+    background: $off-white
+    border-right: 1px solid $line-grey
+    transition: all .5s ease
+    
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 0.75rem
+        margin: 0
+        padding: 0
+
+    &__button
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        width: 3rem
+        height: 3rem
+        cursor: pointer
+        background: none
+        border: none
+        border-radius: 4rem
+
+        &--logo
+            width: 2.5rem
+            height: 2.5rem
+            background: $purple-main
+            border: 1px solid $purple-main
+
+        &--profile
+            overflow: hidden
+            width: 3rem
+            height: 3rem
+            background: $off-white
+            border: 1px solid $line-grey
+
+            &:hover
+                background: $purple-10
+                transition: all .5s ease
+
+            .sidenav__icon
+                border-radius: 2rem
+        
+        &--gradient
+            background: linear-gradient(90deg, #181B5D 0%, #71739C 100%)
+            margin-top: 1.25rem
+            .sidenav__icon
+                filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7500%) hue-rotate(330deg) brightness(108%) contrast(101%)
+
+
+    &__icon
+        width: 2rem   
+
+    &__list
+        @extend .sidenav__container
+        list-style: none
+
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 3rem
+        height: 3rem
+        border-radius: 4rem
+
+        &:hover
+            background: $purple-10
+            transition: all .5s ease
