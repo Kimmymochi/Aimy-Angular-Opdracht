@@ -1,7 +1,12 @@
 <div class="charts">
     <div class="charts__container">
         <h3 class="charts__title">Overzicht per betaalmethode</h3>
-        <button class="charts__button">Euro | Aantal</button>
+
+        <mat-button-toggle-group class="charts__button" value="euro" #toggleGroup= "matButtonToggleGroup" >
+            <mat-button-toggle value="euro">Euro (€)</mat-button-toggle>
+            <mat-button-toggle value="aantal">Aantal</mat-button-toggle>
+        </mat-button-toggle-group>
+      
         <div>
             <canvas id="methodChart"> {{ methodChart }} </canvas>
         </div>

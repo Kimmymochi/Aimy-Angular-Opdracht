@@ -99,6 +99,7 @@ export class ChartComponent {
     // Method Chart
     this.methodOptions.scales.x.title.text = 'Betaalmethoden';
     this.methodOptions.scales.y.max = 10000;
+    this.methodOptions.plugins.title.padding = 0;
 
     this.methodChart = new Chart('methodChart', {
       type: 'bar',
