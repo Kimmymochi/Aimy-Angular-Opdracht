@@ -8,6 +8,11 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
   styleUrls: ['./chart.component.sass'],
 })
 export class ChartComponent {
+  dayName : string = new Date().toLocaleDateString('nl-NL', { weekday:"long"});
+  dateString : string = new Date().toLocaleDateString('nl-NL', { month:"long", day:"numeric", year:"numeric"});
+  today : string = this.dayName + " - " + this.dateString;
+  
+
   methodChart: any;
   statusChart: any;
 

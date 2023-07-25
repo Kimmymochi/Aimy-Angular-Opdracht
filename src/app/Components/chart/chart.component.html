@@ -5,19 +5,27 @@
 <main class="dashboard">
     <div class="dashboard__container">
         <div class="dashboard__date">
-            <p>Vandaag < Maandag - 16 mei 2022 > </p>
+            <p class="dashboard__text"> Vandaag</p>
+            <button class="dashboard__chevron">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+            <p class="dashboard__text"> {{today}} </p>
+            <button class="dashboard__chevron">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+
         </div>
 
-        <form action="" class="dashboard__dropdown">
-            <label for="employee">Werknemer</label>
-            <select name="employee" id="employee">
+        <!-- <form action="" class="dashboard__dropdown">
+            <label for="employee" class="dashboard__label">Werknemer</label>
+            <select name="employee" id="employee" class="dashboard__select">
                 <option value="all">Allemaal</option>
             </select>
-        </form>
+        </form> -->
 
-        <div>     
-            <button>Printen</button>
-            <button>Exporteer</button>
+        <div class="dashboard__buttonbox">     
+            <button class="dashboard__button">Printen</button>
+            <button class="dashboard__button">Exporteer</button>
         </div>
 
     </div>
