@@ -1,22 +1,47 @@
-<div class="charts">
-    <div class="charts__container">
-        <h3 class="charts__title">Overzicht per betaalmethode</h3>
+<header class="header">
+    <h3 class="header__text">Reporting /&nbsp;<b class="header__text--bold">Aimy Payments</b></h3>
+</header>
 
-        <mat-button-toggle-group class="charts__button" value="euro" #toggleGroup= "matButtonToggleGroup" >
-            <mat-button-toggle value="euro">Euro (€)</mat-button-toggle>
-            <mat-button-toggle value="aantal">Aantal</mat-button-toggle>
-        </mat-button-toggle-group>
-      
-        <div>
-            <canvas id="methodChart"> {{ methodChart }} </canvas>
+<main class="dashboard">
+    <div class="dashboard__container">
+        <div class="dashboard__date">
+            <p>Vandaag < Maandag - 16 mei 2022 > </p>
         </div>
+
+        <form action="" class="dashboard__dropdown">
+            <label for="employee">Werknemer</label>
+            <select name="employee" id="employee">
+                <option value="all">Allemaal</option>
+            </select>
+        </form>
+
+        <div>     
+            <button>Printen</button>
+            <button>Exporteer</button>
+        </div>
+
     </div>
 
-    <div class="charts__container">
-        <h3 class="charts__title">Factuurstatus</h3>       
-        <div>
-            <canvas id="statusChart"> {{ statusChart }} </canvas>
+    <div class="charts">
+        <div class="charts__container">
+            <h3 class="charts__title">Overzicht per betaalmethode</h3>
+    
+            <mat-button-toggle-group class="charts__button" value="euro" #toggleGroup= "matButtonToggleGroup" >
+                <mat-button-toggle value="euro">Euro (€)</mat-button-toggle>
+                <mat-button-toggle value="aantal">Aantal</mat-button-toggle>
+            </mat-button-toggle-group>
+          
+            <div>
+                <canvas id="methodChart"> {{ methodChart }} </canvas>
+            </div>
         </div>
-       
+    
+        <div class="charts__container">
+            <h3 class="charts__title">Factuurstatus</h3>       
+            <div>
+                <canvas id="statusChart"> {{ statusChart }} </canvas>
+            </div>
+           
+        </div>
     </div>
-</div>
+</main>

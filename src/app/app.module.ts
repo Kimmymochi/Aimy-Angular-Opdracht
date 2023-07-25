@@ -6,20 +6,23 @@ import { SidenavComponent } from './Components/sidenav/sidenav.component';
 import { ChartComponent } from './Components/chart/chart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { TestComponent } from './Components/test/test.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    ChartComponent
+    ChartComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

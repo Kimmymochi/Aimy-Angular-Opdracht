@@ -1,19 +1,28 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav--collapsed' : ''">
+<div class="sidenav">
 
     <div class="sidenav__container">
-        <button class="sidenav__button sidenav__button--logo" >
-            <img class="sidenav__icon" src="assets/icons/ic_logo.svg" alt="Aimy Logo">
+        <button class="sidenav__button sidenav__button--logo"
+                matTooltip="Home"
+                matTooltipPosition="right">
+            <img class="sidenav__icon" src="assets/icons/ic_logo.svg">
         </button>
 
-        <button class="sidenav__button sidenav__button--profile" >
-            <img class="sidenav__icon" src="assets/test_profile.jpg" alt="Profielfoto">
+        <button class="sidenav__button sidenav__button--profile"
+                matTooltip="Profile"
+                matTooltipPosition="right">
+            <img class="sidenav__icon" src="assets/test_profile.jpg">
         </button>
     </div>
 
 
     <ul class="sidenav__list">
         <li class="sidenav__item" *ngFor="let data of sidenavData">
-            <button class="sidenav__button">
+            <button class="sidenav__button"
+                    [routerLink]="[data.routerLink]"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    matTooltip={{data.label}}
+                    matTooltipPosition="right">
                 <img class="sidenav__icon" 
                     [src]="[data.icon]"
                     [alt]="[data.label]">
@@ -21,8 +30,12 @@
         </li>
     </ul>
 
-    <button class="sidenav__button sidenav__button--gradient" >
+    <button class="sidenav__button sidenav__button--gradient"
+            matTooltip="Add Invoice"
+            matTooltipPosition="right">
             <img class="sidenav__icon" src="assets/icons/ic_add_invoice.svg">
     </button>
 
 </div>
+
+<router-outlet></router-outlet>
